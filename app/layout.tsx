@@ -1,5 +1,6 @@
 import './globals.css'
 import { Outfit } from 'next/font/google'
+import '@fontsource-variable/material-symbols-sharp'
 
 const font = Outfit({ subsets: ['latin-ext'] })
 

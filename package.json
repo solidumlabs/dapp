@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@heroicons/react": "^2.0.18",
+    "@fontsource-variable/material-symbols-sharp": "^5.0.1",
     "@paulmillr/qr": "^0.1.1",
     "@types/node": "20.2.3",
     "@types/react": "18.2.6",
