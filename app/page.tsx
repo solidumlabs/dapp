@@ -228,7 +228,7 @@ export default function Home() {
 
             <div className="bg-emerald-200 p-10 lg:col-span-3">
               <h2 className="text-4xl font-medium mb-10">
-                Ready to dive in? Let's start!
+                Ready to dive in? Let&apos;s start!
               </h2>
               <div className="md:flex gap-4">
                 <button className="p-6 w-full md:w-auto bg-black text-white font-semibold">
