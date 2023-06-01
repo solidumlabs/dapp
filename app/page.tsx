@@ -1,7 +1,8 @@
+import { HomePageHashResolver } from '@/components/assets'
 import { Header, SolidumIcon } from '@/components/base'
 import Image from 'next/image'
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <Header />
@@ -34,30 +35,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
-
-            <div className="bg-emerald-200 p-10">
-              <div className="h-full flex flex-col">
-                <div className="flex-1 border-4 border-dashed border-black flex flex-col items-center justify-center p-10">
-                  <div className="grid grid-cols-4 gap-6">
-                    <i className="material-symbols-sharp text-4xl">draft</i>
-                    <i className="material-symbols-sharp text-4xl">movie</i>
-                    <i className="material-symbols-sharp text-4xl">
-                      music_note
-                    </i>
-                    <i className="material-symbols-sharp text-4xl">photo</i>
-                    <i className="material-symbols-sharp text-4xl">
-                      folder_zip
-                    </i>
-                    <i className="material-symbols-sharp text-4xl">terminal</i>
-                    <i className="material-symbols-sharp text-4xl">book</i>
-                    <i className="material-symbols-sharp text-4xl">code</i>
-                  </div>
-                  <p className="mt-8 text-xl font-semibold text-center">
-                    Drag & Drop or Choose Asset
-                  </p>
-                </div>
-              </div>
-            </div>
+            <HomePageHashResolver />
           </div>
 
           <div className="bg-gray-100 p-10 grid gap-10 grid-cols-2 md:grid-cols-4 justify-items-center">
