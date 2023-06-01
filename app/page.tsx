@@ -38,34 +38,34 @@ export default function HomePage() {
             <HomePageHashResolver />
           </div>
 
-          <div className="bg-gray-100 p-10 grid gap-10 grid-cols-2 md:grid-cols-4 justify-items-center">
+          <div className="bg-gray-100 p-10 grid gap-10 grid-cols-2 md:grid-cols-4 justify-items-center items-center">
             <Image
-              src="https://dstudio.digital/images/clients/Delloitte-w.svg"
-              alt="sd"
+              src="/metamask.svg"
+              alt="metamask"
               width="0"
               height="0"
-              className="invert w-auto"
+              className="w-auto md:p-6"
             />
             <Image
-              src="https://dstudio.digital/images/clients/outshifter-w.svg"
-              alt="sd"
+              src="/opensea.svg"
+              alt="opensea"
               width="0"
               height="0"
-              className="invert w-auto"
+              className="w-auto md:p-6"
             />
             <Image
-              src="https://dstudio.digital/images/clients/Unmarshal-w.svg"
+              src="/rarible.svg"
               alt="sd"
               width="0"
               height="0"
-              className="invert w-auto"
+              className="w-auto md:p-6"
             />
             <Image
-              src="https://dstudio.digital/images/clients/frontier-w.svg"
+              src="/ethereum.svg"
               alt="sd"
               width="0"
               height="0"
-              className="invert w-auto"
+              className="w-auto md:p-6"
             />
           </div>
         </section>
