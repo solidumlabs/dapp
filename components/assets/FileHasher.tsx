@@ -28,7 +28,7 @@ export const FileHasher = ({ onFileHash }: IFileHasherProps) => {
         htmlFor="file-hasher"
         className="bg-emerald-200 p-10 cursor-pointer"
       >
-        <div className="h-full flex flex-col">
+        <div className="h-full w-full flex flex-col">
           <div className="flex-1 border-4 border-dashed border-black flex flex-col items-center justify-center p-10">
             <div className="grid grid-cols-4 gap-6">
               <i className="material-symbols-sharp text-4xl">draft</i>
@@ -41,7 +41,7 @@ export const FileHasher = ({ onFileHash }: IFileHasherProps) => {
               <i className="material-symbols-sharp text-4xl">code</i>
             </div>
             <p className="mt-8 text-xl font-semibold text-center">
-              Drag & Drop or Choose Asset
+              Drag & Drop or Choose File
             </p>
           </div>
         </div>

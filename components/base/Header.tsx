@@ -6,10 +6,12 @@ export const Header = () => {
       <div className="container flex h-20 items-center">
         <div className="flex items-center">
           <SolidumIcon className="w-12 p-2 cursor-pointer" />
+          <p className="text-lg font-medium">Solidum</p>
         </div>
         <div className="flex-1 flex gap-3 items-center justify-end">
-          <button className="p-3">
+          <button className="p-3 flex gap-4 font-medium">
             <i className="material-symbols-sharp">account_balance_wallet</i>
+            Connect wallet
           </button>
         </div>
       </div>
