@@ -2,6 +2,7 @@ import './globals.css'
 import { Metadata } from 'next'
 import { Outfit } from 'next/font/google'
 import '@fontsource-variable/material-symbols-sharp'
+import { Footer, Header } from '@/components/base'
 
 const font = Outfit({ subsets: ['latin-ext'] })
 
@@ -27,7 +28,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
