@@ -9,9 +9,9 @@ export const Header = () => {
           <p className="text-lg font-medium">Solidum</p>
         </div>
         <div className="flex-1 flex gap-3 items-center justify-end">
-          <button className="p-3 flex gap-4 font-medium">
+          <button className="p-3 flex gap-3 font-medium">
+            <span>Connect wallet</span>
             <i className="material-symbols-sharp">account_balance_wallet</i>
-            Connect wallet
           </button>
         </div>
       </div>

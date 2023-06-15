@@ -18,9 +18,12 @@ export default function HomePage() {
                 and secure way to transform any file into a unique NFT, opening
                 new avenues for creativity and potential revenue.
               </p>
-              <div className="md:flex gap-4">
-                <button className="p-6 w-full md:w-auto bg-black text-white font-semibold">
-                  Create Asset
+
+              <div className="md:flex gap-4 mt-16">
+                <button className="relative p-6 w-full md:w-auto font-semibold group text-black">
+                  <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-emerald-200 group-hover:translate-x-0 group-hover:translate-y-0" />
+                  <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
+                  <span className="relative">Create Asset</span>
                 </button>
                 <div className="p-6 w-full md:w-auto flex gap-3 font-semibold justify-center">
                   <span>Learn more</span>
@@ -71,10 +74,12 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-10">
             <div>
-              <p className="text-4xl font-extrabold mb-6 p-4 px-6 bg-emerald-200 w-fit">
-                1
-              </p>
-              <p className="text-lg">
+              <div className="relative font-bold text-2xl p-6 group text-black text-center w-16">
+                <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-emerald-200 group-hover:translate-x-0 group-hover:translate-y-0" />
+                <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
+                <span className="relative">1</span>
+              </div>
+              <p className="text-xl mt-8">
                 Select any digital file from your device that you wish to turn
                 into an NFT. Add relevant metadata to provide context and
                 enhance the value of your digital asset.
@@ -82,10 +87,12 @@ export default function HomePage() {
             </div>
 
             <div>
-              <p className="text-4xl font-extrabold mb-6 p-4 px-6 bg-emerald-200 w-fit">
-                2
-              </p>
-              <p className="text-lg">
+              <div className="relative font-bold text-2xl p-6 group text-black text-center w-16">
+                <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-amber-200 group-hover:translate-x-0 group-hover:translate-y-0" />
+                <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
+                <span className="relative">2</span>
+              </div>
+              <p className="text-xl mt-8">
                 Review your file and metadata in a preview before finalizing.
                 Our platform transforms your file into a unique, tamper-proof
                 NFT using the secure Keccak-256 hashing algorithm.
@@ -93,10 +100,12 @@ export default function HomePage() {
             </div>
 
             <div>
-              <p className="text-4xl font-extrabold mb-6 p-4 px-6 bg-emerald-200  w-fit">
-                3
-              </p>
-              <p className="text-lg">
+              <div className="relative font-bold text-2xl p-6 group text-black text-center w-16">
+                <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-rose-200 group-hover:translate-x-0 group-hover:translate-y-0" />
+                <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
+                <span className="relative">3</span>
+              </div>
+              <p className="text-xl mt-8">
                 Once minted, your NFT appears in your personal gallery. Easily
                 list your NFT on any popular marketplace and reach out to a
                 worldwide audience of potential buyers.
@@ -189,7 +198,7 @@ export default function HomePage() {
           <p className="mb-2 text-gray-500">Some Important</p>
           <h2 className="text-4xl font-semibold mb-12">Numbers</h2>
 
-          <div className="grid lg:grid-cols-2 gap-10">
+          <div className="grid lg:grid-cols-2 gap-24">
             <div className="grid items-center gap-8 grid-cols-2">
               <div>
                 <p className="text-4xl font-extrabold mb-2 w-fit">0.005 ETH</p>
@@ -209,13 +218,15 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="bg-emerald-200 p-10">
-              <h2 className="text-3xl/normal font-medium mb-10">
+            <div>
+              <h2 className="text-4xl/normal font-medium mb-8">
                 Embrace the NFT Revolution. Begin Your Journey Now!
               </h2>
               <div className="md:flex gap-4">
-                <button className="p-6 w-full md:w-auto bg-black text-white font-semibold">
-                  Start Now
+                <button className="relative w-full md:w-auto p-6 font-semibold group text-black">
+                  <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-emerald-200 group-hover:translate-x-0 group-hover:translate-y-0" />
+                  <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
+                  <span className="relative">Create Asset</span>
                 </button>
                 <button className="p-6 w-full md:w-auto flex gap-3 font-semibold justify-center">
                   <span>Back to Top</span>
