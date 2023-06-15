@@ -56,5 +56,5 @@ export const FileHasher = ({ onFileHash }: IFileHasherProps) => {
 
 export const HomePageHashResolver = () => {
   const router = useRouter()
-  return <FileHasher onFileHash={(hash) => router.push('/token/' + hash)} />
+  return <FileHasher onFileHash={(hash) => router.push('/assets/' + hash)} />
 }

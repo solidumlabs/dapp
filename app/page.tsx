@@ -1,5 +1,6 @@
 import { HomePageHashResolver } from '@/components/assets'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function HomePage() {
   return (
@@ -17,11 +18,14 @@ export default function HomePage() {
             </p>
 
             <div className="md:flex gap-4 mt-16">
-              <button className="relative p-6 w-full md:w-auto font-semibold group text-black">
+              <Link
+                href="/assets/new"
+                className="relative p-6 w-full md:w-auto font-semibold group text-black"
+              >
                 <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-emerald-200 group-hover:translate-x-0 group-hover:translate-y-0" />
                 <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
                 <span className="relative">Create Asset</span>
-              </button>
+              </Link>
               <div className="p-6 w-full md:w-auto flex gap-3 font-semibold justify-center">
                 <span>Learn more</span>
                 <i className="material-symbols-sharp">
@@ -218,15 +222,21 @@ export default function HomePage() {
               Embrace the NFT Revolution. Begin Your Journey Now!
             </h2>
             <div className="md:flex gap-4">
-              <button className="relative w-full md:w-auto p-6 font-semibold group text-black">
+              <Link
+                href="/assets/new"
+                className="relative w-full md:w-auto p-6 font-semibold group text-black"
+              >
                 <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-emerald-200 group-hover:translate-x-0 group-hover:translate-y-0" />
                 <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
                 <span className="relative">Create Asset</span>
-              </button>
-              <button className="p-6 w-full md:w-auto flex gap-3 font-semibold justify-center">
+              </Link>
+              <Link
+                href="#"
+                className="p-6 w-full md:w-auto flex gap-3 font-semibold justify-center"
+              >
                 <span>Back to Top</span>
                 <i className="material-symbols-sharp">north</i>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
