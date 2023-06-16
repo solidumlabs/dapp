@@ -8,7 +8,7 @@ interface IAssetPageProps {
 export default function AssetPage({ params }: IAssetPageProps) {
   const token = params.token
   return (
-    <main className="container py-12">
+    <main className="container py-12 pb-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div className="max-w-[32rem]">
           <div className="sticky top-32">

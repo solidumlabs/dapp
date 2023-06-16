@@ -12,7 +12,7 @@ export default function CreateAssetPage() {
   const [form, setForm] = useState<FormState>()
   const isFileSelected: boolean = !!(form?.file && form.token)
   return (
-    <main className="container py-12">
+    <main className="container py-12 pb-24">
       <h1 className="text-4xl font-semibold text-center">Create New Asset</h1>
       {!isFileSelected ? (
         <FileHasher
