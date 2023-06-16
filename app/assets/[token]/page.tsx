@@ -1,4 +1,6 @@
 import { PreviewImage } from '@/components/assets'
+import { getShortToken } from '@/utils'
+import Image from 'next/image'
 import Link from 'next/link'
 
 interface IAssetPageProps {
@@ -16,33 +18,56 @@ export default function AssetPage({ params }: IAssetPageProps) {
           </div>
         </div>
         <div>
-          <h1 className="text-3xl font-bold">
+          <h1 className="text-3xl font-bold leading-snug">
             Do Oxen Low when Mangers are Full?
           </h1>
-          <p className="text-ellipsis truncate text-slate-500 mt-2">#{token}</p>
+          <div className="flex items-center gap-2 pt-2">
+            <p className="text-lg font-medium pr-1">
+              #{getShortToken(token, 16)}
+            </p>
+            <button>
+              <i className="material-symbols-sharp p-1">content_copy</i>
+            </button>
+            <button>
+              <i className="material-symbols-sharp p-1">share</i>
+            </button>
+          </div>
 
-          <div className="flex flex-wrap gap-8 mt-12">
-            <Link href="#">
-              <button className="relative w-full md:w-auto p-6 font-semibold group text-black">
-                <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-cyan-200 group-hover:translate-x-0 group-hover:translate-y-0" />
-                <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
-                <span className="relative">OpenSea</span>
-              </button>
-            </Link>
-            <Link href="#">
-              <button className="relative w-full md:w-auto p-6 font-semibold group text-black">
-                <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-amber-200 group-hover:translate-x-0 group-hover:translate-y-0" />
-                <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
-                <span className="relative">Rarible</span>
-              </button>
-            </Link>
-            <Link href="#">
-              <button className="relative w-full md:w-auto p-6 font-semibold group text-black">
-                <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-violet-200 group-hover:translate-x-0 group-hover:translate-y-0" />
-                <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
-                <span className="relative">Etherscan</span>
-              </button>
-            </Link>
+          <div className="grid grid-cols-2 gap-12 mt-8">
+            <div className="flex gap-4 items-center">
+              <Image
+                alt="creator"
+                width="48"
+                height="48"
+                src={'https://avatar.tobi.sh/' + token + '.svg'}
+                className="border-4 border-black"
+              />
+              <div>
+                <p className="text-slate-500">Creator</p>
+                <p className="font-bold">
+                  {getShortToken('0xdDa7af6411C859588C9103Ea59870df3Dc3fc6EF')}
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-center">
+              <Image
+                alt="creator"
+                width="48"
+                height="48"
+                src={
+                  'https://avatar.tobi.sh/' +
+                  '0xbc737139dd8c8d192f4b9aa713ad99036f004007' +
+                  '.svg'
+                }
+                className="border-4 border-black"
+              />
+              <div>
+                <p className="text-slate-500">Owner</p>
+                <p className="font-bold">
+                  {getShortToken('0xbc737139dd8c8d192f4b9aa713ad99036f004007')}
+                </p>
+              </div>
+            </div>
           </div>
 
           <h2 className="mt-8 block mb-2 text-lg font-bold">Description</h2>
@@ -73,6 +98,30 @@ export default function AssetPage({ params }: IAssetPageProps) {
           >
             https://shron1.chtyvo.org.ua/Myrnyi/Do_oxen_low_when_mangers_are_full_anhl.pdf?PHPSESSID=jdah3ltqs1o185ojfeknp1e3a4
           </a>
+
+          <div className="flex flex-wrap gap-8 mt-12">
+            <Link href="#">
+              <button className="relative w-full md:w-auto p-6 font-semibold group text-black">
+                <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-cyan-200 group-hover:translate-x-0 group-hover:translate-y-0" />
+                <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
+                <span className="relative">OpenSea</span>
+              </button>
+            </Link>
+            <Link href="#">
+              <button className="relative w-full md:w-auto p-6 font-semibold group text-black">
+                <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-amber-200 group-hover:translate-x-0 group-hover:translate-y-0" />
+                <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
+                <span className="relative">Rarible</span>
+              </button>
+            </Link>
+            <Link href="#">
+              <button className="relative w-full md:w-auto p-6 font-semibold group text-black">
+                <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-violet-200 group-hover:translate-x-0 group-hover:translate-y-0" />
+                <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
+                <span className="relative">Etherscan</span>
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </main>
