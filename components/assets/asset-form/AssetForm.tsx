@@ -27,6 +27,13 @@ export const AssetForm = ({ token }: IAssetFormProps) => {
         />
       </div>
       <div className="mb-8">
+        <label className="block mb-2 text-sm font-bold">Author</label>
+        <input
+          placeholder="John Doe..."
+          className="text-lg p-3 block w-full font-medium focus:outline-none border-4 border-black focus:border-dashed"
+        />
+      </div>
+      <div className="mb-8">
         <label className="block mb-2 text-sm font-bold">External Link</label>
         <input
           placeholder="https://..."
