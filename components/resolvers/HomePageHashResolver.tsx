@@ -5,5 +5,5 @@ import { FileHasher } from '@/components/assets'
 
 export const HomePageHashResolver = () => {
   const router = useRouter()
-  return <FileHasher onFileHash={(hash) => router.push('/assets/' + hash)} />
+  return <FileHasher onFileHash={(token) => router.push('/assets/' + token)} />
 }

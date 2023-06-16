@@ -5,7 +5,7 @@ import { keccak256 } from 'js-sha3'
 import classNames from 'classnames'
 
 interface IFileHasherProps {
-  onFileHash: (hash: string) => void
+  onFileHash: (tokenID: string, file: File) => void
   className?: string
 }
 
@@ -15,7 +15,8 @@ export const FileHasher = ({ onFileHash, className }: IFileHasherProps) => {
     if (!file) return
     const buffer = await file.arrayBuffer()
     const hash: string = keccak256(buffer)
-    onFileHash(hash)
+    const tokenID = BigInt('0x' + hash).toString()
+    onFileHash(tokenID, file)
   }
   const _className = classNames(
     'block relative p-10 font-semibold group text-black cursor-pointer',
