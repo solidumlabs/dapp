@@ -34,9 +34,10 @@ export const PreviewInput = () => {
               </p>
             </div>
             <div
-              className="absolute w-full h-full bg-contain bg-center bg-no-repeat bg-white"
+              className="absolute w-full h-full bg-contain bg-center bg-no-repeat"
               style={{
                 backgroundImage: url ? 'url(' + url + ')' : undefined,
+                backgroundColor: url ? 'white' : 'transparent',
               }}
             />
           </div>
