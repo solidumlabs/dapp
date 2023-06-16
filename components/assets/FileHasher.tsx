@@ -2,13 +2,14 @@
 
 import { ChangeEvent } from 'react'
 import { keccak256 } from 'js-sha3'
-import { useRouter } from 'next/navigation'
+import classNames from 'classnames'
 
 interface IFileHasherProps {
   onFileHash: (hash: string) => void
+  className?: string
 }
 
-export const FileHasher = ({ onFileHash }: IFileHasherProps) => {
+export const FileHasher = ({ onFileHash, className }: IFileHasherProps) => {
   const onSelectFile = async (event: ChangeEvent<HTMLInputElement>) => {
     const file: File | undefined | null = event.target.files?.item(0)
     if (!file) return
@@ -16,6 +17,10 @@ export const FileHasher = ({ onFileHash }: IFileHasherProps) => {
     const hash: string = keccak256(buffer)
     onFileHash(hash)
   }
+  const _className = classNames(
+    'block relative p-10 font-semibold group text-black cursor-pointer',
+    className
+  )
   return (
     <>
       <input
@@ -24,11 +29,8 @@ export const FileHasher = ({ onFileHash }: IFileHasherProps) => {
         className="hidden"
         onChange={onSelectFile}
       />
-      <label
-        htmlFor="file-hasher"
-        className="relative p-10 font-semibold group text-black cursor-pointer"
-      >
-        <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-emerald-200 group-hover:translate-x-0 group-hover:translate-y-0" />
+      <label htmlFor="file-hasher" className={_className}>
+        <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-amber-200 group-hover:translate-x-0 group-hover:translate-y-0" />
         <span className="absolute inset-0 w-full h-full border-4 border-black border-dashed"></span>
         <span className="relative">
           <div className="h-full w-full flex flex-col">
@@ -52,9 +54,4 @@ export const FileHasher = ({ onFileHash }: IFileHasherProps) => {
       </label>
     </>
   )
-}
-
-export const HomePageHashResolver = () => {
-  const router = useRouter()
-  return <FileHasher onFileHash={(hash) => router.push('/assets/' + hash)} />
 }

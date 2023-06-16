@@ -1,3 +1,3 @@
-export default function TokenPage() {
-  return <>TokenPage</>
+export default function AssetPage() {
+  return <>AssetPage</>
 }

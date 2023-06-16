@@ -1,8 +1,11 @@
-import { HomePageHashResolver } from '@/components/assets'
+import { HomePageHashResolver } from '@/components/resolvers'
+import { Routes } from '@/config'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function HomePage() {
+  const createAssetLink = Routes.assetCreate()
+
   return (
     <main className="container pt-12 pb-24">
       <section className="mb-24">
@@ -18,13 +21,12 @@ export default function HomePage() {
             </p>
 
             <div className="md:flex gap-4 mt-16">
-              <Link
-                href="/assets/new"
-                className="relative p-6 w-full md:w-auto font-semibold group text-black"
-              >
-                <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-emerald-200 group-hover:translate-x-0 group-hover:translate-y-0" />
-                <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
-                <span className="relative">Create Asset</span>
+              <Link href={createAssetLink}>
+                <button className="relative w-full md:w-auto p-6 font-semibold group text-black">
+                  <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-emerald-200 group-hover:translate-x-0 group-hover:translate-y-0" />
+                  <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
+                  <span className="relative">Create Asset</span>
+                </button>
               </Link>
               <div className="p-6 w-full md:w-auto flex gap-3 font-semibold justify-center">
                 <span>Learn more</span>
@@ -177,8 +179,8 @@ export default function HomePage() {
           </div>
 
           <div className="bg-cyan-200 p-10 flex flex-col">
-            <i className="material-symbols-sharp mb-5 text-4xl">functions</i>
-            <h2 className="text-4xl font-medium mb-5">Keccak-256</h2>
+            <i className="material-symbols-sharp mb-5 text-4xl">diamond</i>
+            <h2 className="text-4xl font-medium mb-5">Uniqueness</h2>
             <p className="text-lg flex-1">
               Leveraging the power of Keccak-256, the secure hash algorithm of
               Ethereum, every NFT created on our platform is assigned a unique,
@@ -222,13 +224,12 @@ export default function HomePage() {
               Embrace the NFT Revolution. Begin Your Journey Now!
             </h2>
             <div className="md:flex gap-4">
-              <Link
-                href="/assets/new"
-                className="relative w-full md:w-auto p-6 font-semibold group text-black"
-              >
-                <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-emerald-200 group-hover:translate-x-0 group-hover:translate-y-0" />
-                <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
-                <span className="relative">Create Asset</span>
+              <Link href={createAssetLink}>
+                <button className="relative w-full md:w-auto p-6 font-semibold group text-black">
+                  <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-emerald-200 group-hover:translate-x-0 group-hover:translate-y-0" />
+                  <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
+                  <span className="relative">Create Asset</span>
+                </button>
               </Link>
               <Link
                 href="#"

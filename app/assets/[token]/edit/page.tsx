@@ -1,3 +1,5 @@
-export default function EditTokenPage() {
-  return <>EditTokenPage</>
+'use client'
+
+export default function EditAssetPage() {
+  return <>EditAssetPage</>
 }
