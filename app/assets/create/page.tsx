@@ -22,7 +22,7 @@ export default function CreateAssetPage() {
       ) : (
         <>
           <p className="text-center mt-2 text-lg font-medium">#{form?.token}</p>
-          <div className="max-w-[32rem] mx-auto mt-8">
+          <div className="max-w-[32rem] mx-auto mt-12">
             <AssetForm />
           </div>
         </>

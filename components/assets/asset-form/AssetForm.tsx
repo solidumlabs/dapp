@@ -1,5 +1,7 @@
 'use client'
 
+import { PreviewInput } from '../PreviewInput'
+
 interface IAssetFormProps {
   token?: string
 }
@@ -7,6 +9,9 @@ interface IAssetFormProps {
 export const AssetForm = ({ token }: IAssetFormProps) => {
   return (
     <div>
+      <div className="mb-8">
+        <PreviewInput />
+      </div>
       <div className="mb-8">
         <label className="block mb-2 text-sm font-bold">Name</label>
         <input
